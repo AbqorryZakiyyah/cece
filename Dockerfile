@@ -2,7 +2,7 @@
 FROM python:3.9
 
 # Menentukan direktori kerja di dalam container
-WORKDIR /app
+WORKDIR /main
 
 # Menyalin file requirements.txt ke dalam container
 COPY requirements.txt .
@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Menjalankan perintah untuk menjalankan aplikasi Flask
-CMD ["python", "app.py"]
+CMD ["python", "main.py"]
